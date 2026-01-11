@@ -1541,15 +1541,22 @@ export interface ProductOption {
 export interface ProductItemType {
     id: string;
     name: string;
-    options: ProductOption[];
     icon: string;
-    tags?: { name: string; icon: string; color: string; }[]; 
-}
-
-
-export interface ProductType {
+    options: { size: string; price: number }[];
+    tags: { name: string; icon: string; color: string }[];
+  }
+  
+  export interface SubcategoryType {
     id: string;
     name: string;
     icon: string;
     items: ProductItemType[];
-}
+  }
+  
+  export interface ProductType {
+    id: string;
+    name: string;
+    icon: string;
+    items: ProductItemType[] | SubcategoryType[];
+  }
+  

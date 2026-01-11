@@ -15,6 +15,7 @@
     "@emotion/styled": "^11.13.0",
     "@reduxjs/toolkit": "^2.2.7",
     "@splidejs/react-splide": "^0.7.12",
+    "@tensorflow/tfjs": "^4.22.0",
     "antd": "^5.20.2",
     "axios": "^1.7.4",
     "flag-icons": "^7.2.3",
