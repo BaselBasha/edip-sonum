@@ -185,7 +185,7 @@ export const products = [
     {
         id: '3',
         name: 'Cocktails',
-        icon: "/public/all/Unknown-10.jpeg",
+        icon: "/all/Unknown-10.jpeg",
         items: [
             {
                 id: '3_1',
@@ -276,7 +276,7 @@ export const products = [
     {
         "id": "4",
         "name": "Special Cocktails",
-        "icon": "/public/all/Unknown-4.jpeg",
+        "icon": "/all/Unknown-4.jpeg",
         "items": [
             {
                 "id": "4_1",
@@ -285,7 +285,7 @@ export const products = [
                     { "size": "Medium", "price": 200 },
                     { "size": "Large", "price": 250 }
                 ],
-                "icon": "/public/all/Unknown-7.jpeg",
+                "icon": "/all/Unknown-7.jpeg",
                 "tags": [
                     { "name": "Fruits", "color": "bg-green-200", "icon": "🍇" },
                     { "name": "Cream", "color": "bg-white", "icon": "🍦" },
@@ -299,7 +299,7 @@ export const products = [
                     { "size": "Medium", "price": 250 },
                     { "size": "Large", "price": 300 }
                 ],
-                "icon": "/public/all/Unknown-4.jpeg",
+                "icon": "/all/Unknown-4.jpeg",
                 "tags": [
                     { "name": "Mango", "color": "bg-yellow-200", "icon": "🥭" },
                     { "name": "Cream", "color": "bg-white", "icon": "🍦" },
@@ -313,7 +313,7 @@ export const products = [
                     { "size": "Medium", "price": 250 },
                     { "size": "Large", "price": 300 }
                 ],
-                "icon": "/public/all/Unknown-4.jpeg",
+                "icon": "/all/Unknown-4.jpeg",
                 "tags": [
                     { "name": "Avocado", "color": "bg-green-200", "icon": "🥑" },
                     { "name": "Cream", "color": "bg-white", "icon": "🍦" },
@@ -327,7 +327,7 @@ export const products = [
                     { "size": "Medium", "price": 200 },
                     { "size": "Large", "price": 250 }
                 ],
-                "icon": "/public/all/Unknown-4.jpeg",
+                "icon": "/all/Unknown-4.jpeg",
                 "tags": [
                     { "name": "Banana", "color": "bg-yellow-200", "icon": "🍌" },
                     { "name": "Milk", "color": "bg-white", "icon": "🥛" },
@@ -341,7 +341,7 @@ export const products = [
                     { "size": "Medium", "price": 225 },
                     { "size": "Large", "price": 275 }
                 ],
-                "icon": "/public/all/Unknown-4.jpeg",
+                "icon": "/all/Unknown-4.jpeg",
                 "tags": [
                     { "name": "Banana", "color": "bg-yellow-200", "icon": "🍌" },
                     { "name": "Milk", "color": "bg-white", "icon": "🥛" },
@@ -355,7 +355,7 @@ export const products = [
                     { "size": "Medium", "price": 225 },
                     { "size": "Large", "price": 275 }
                 ],
-                "icon": "/public/all/Unknown-4.jpeg",
+                "icon": "/all/Unknown-4.jpeg",
                 "tags": [
                     { "name": "Banana", "color": "bg-yellow-200", "icon": "🍌" },
                     { "name": "Milk", "color": "bg-white", "icon": "🥛" },
@@ -367,12 +367,12 @@ export const products = [
     {
         id: '5',
         name: 'Waffle & Cake',
-        icon: '/public/all/Unknown-3.jpeg',
+        icon: '/all/Unknown-3.jpeg',
         items: [
             {
                 id: '5_1',
                 name: 'Waffle',
-                icon: '/public/all/Unknown-18.jpeg',
+                icon: '/all/Unknown-18.jpeg',
                 items: [
                     {
                         id: '5_1_1',
@@ -406,7 +406,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 300 },
                         ],
-                        icon: '/public/all/Unknown-18.jpeg',
+                        icon: '/all/Unknown-18.jpeg',
                         tags: [
                             { name: 'Fruits', color: 'bg-green-200', icon: '🍓' },
                             { name: 'Waffle', color: 'bg-yellow-200', icon: '🧇' },
@@ -445,7 +445,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 275 },
                         ],
-                        icon: '/public/all/Unknown-3.jpeg',
+                        icon: '/all/Unknown-3.jpeg',
                         tags: [
                             { name: 'Strawberry', color: 'bg-pink-200', icon: '🍓' },
                             { name: 'Waffle', color: 'bg-yellow-200', icon: '🧇' },
@@ -522,7 +522,7 @@ export const products = [
             {
                 id: '5_2',
                 name: 'Waffle Steak',
-                icon: '/public/all/Unknown-16.jpeg',
+                icon: '/all/Unknown-16.jpeg',
                 items: [
                     {
                         id: '5_2_1',
@@ -556,7 +556,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 300 },
                         ],
-                        icon: '/public/all/Unknown-16.jpeg',
+                        icon: '/all/Unknown-16.jpeg',
                         tags: [
                             { name: 'Fruits', color: 'bg-green-200', icon: '🍓' },
                             { name: 'Waffle', color: 'bg-yellow-200', icon: '🧇' },
@@ -672,7 +672,7 @@ export const products = [
             {
                 id: '5_3',
                 name: 'Pancakes',
-                icon: '/public/all/Unknown-9.jpeg',
+                icon: '/all/Unknown-9.jpeg',
                 items: [
                     {
                         id: '5_3_1',
@@ -680,7 +680,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 250 },
                         ],
-                        icon: '/public/all/Unknown-9.jpeg',
+                        icon: '/all/Unknown-9.jpeg',
                         tags: [
                             { name: 'Chocolate', color: 'bg-neutral-200', icon: '🍫' },
                             { name: 'Pancakes', color: 'bg-yellow-100', icon: '🥞' },
@@ -693,7 +693,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 250 },
                         ],
-                        icon: '/public/all/Unknown-9.jpeg',
+                        icon: '/all/Unknown-9.jpeg',
                         tags: [
                             { name: 'White Chocolate', color: 'bg-white', icon: '🍫' },
                             { name: 'Pancakes', color: 'bg-yellow-100', icon: '🥞' },
@@ -706,7 +706,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 300 },
                         ],
-                        icon: '/public/all/Unknown-9.jpeg',
+                        icon: '/all/Unknown-9.jpeg',
                         tags: [
                             { name: 'Fruits', color: 'bg-green-200', icon: '🍓' },
                             { name: 'Pancakes', color: 'bg-yellow-100', icon: '🥞' },
@@ -719,7 +719,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 275 },
                         ],
-                        icon: '/public/all/Unknown-9.jpeg',
+                        icon: '/all/Unknown-9.jpeg',
                         tags: [
                             { name: 'Banana', color: 'bg-yellow-200', icon: '🍌' },
                             { name: 'Pancakes', color: 'bg-yellow-100', icon: '🥞' },
@@ -732,7 +732,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 325 },
                         ],
-                        icon: '/public/all/Unknown-9.jpeg',
+                        icon: '/all/Unknown-9.jpeg',
                         tags: [
                             { name: 'Banana', color: 'bg-yellow-200', icon: '🍌' },
                             { name: 'Cream', color: 'bg-white', icon: '🍦' },
@@ -745,7 +745,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 275 },
                         ],
-                        icon: '/public/all/Unknown-9.jpeg',
+                        icon: '/all/Unknown-9.jpeg',
                         tags: [
                             { name: 'Strawberry', color: 'bg-pink-200', icon: '🍓' },
                             { name: 'Pancakes', color: 'bg-yellow-100', icon: '🥞' },
@@ -758,7 +758,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 300 },
                         ],
-                        icon: '/public/all/Unknown-9.jpeg',
+                        icon: '/all/Unknown-9.jpeg',
                         tags: [
                             { name: 'Lotus', color: 'bg-neutral-200', icon: '🍪' },
                             { name: 'Pancakes', color: 'bg-yellow-100', icon: '🥞' },
@@ -835,7 +835,7 @@ export const products = [
             {
                 id: '5_4',
                 name: 'Bubble Waffle',
-                icon: '/public/all/Unknown.jpeg',
+                icon: '/all/Unknown.jpeg',
                 items: [
                     {
                         id: '5_4_1',
@@ -869,7 +869,7 @@ export const products = [
                         options: [
                             { size: 'Normal', price: 300 },
                         ],
-                        icon: '/public/all/Unknown.jpeg',
+                        icon: '/all/Unknown.jpeg',
                         tags: [
                             { name: 'Fruits', color: 'bg-green-200', icon: '🍓' },
                             { name: 'Waffle Bubble', color: 'bg-yellow-100', icon: '🧇' },
@@ -988,7 +988,7 @@ export const products = [
     {
         id: '6',
         name: 'Frozen',
-        icon: "/public/frozen/Unknown-2.jpeg",
+        icon: "/frozen/Unknown-2.jpeg",
         items: [
             {
                 id: '6_1',
@@ -996,7 +996,7 @@ export const products = [
                 options: [
                     {size: 'Large', price: 150},
                 ],
-                icon: "/public/frozen/Unknown-1.jpeg",
+                icon: "/frozen/Unknown-1.jpeg",
                 tags: [
                     { name: 'Pineapple', color: 'bg-yellow-300', icon: '🍍' },
                     { name: 'Coconut', color: 'bg-white', icon: '🥥' },
@@ -1009,7 +1009,7 @@ export const products = [
                 options: [
                     {size: 'Large', price: 150},
                 ],
-                icon: "/public/frozen/Unknown-2.jpeg",
+                icon: "/frozen/Unknown-2.jpeg",
                 tags: [
                     { name: 'Tropical', color: 'bg-green-300', icon: '🌴' },
                     { name: 'Fruity', color: 'bg-yellow-200', icon: '🍊' },
@@ -1023,7 +1023,7 @@ export const products = [
                  
                     {size: 'Large', price: 150},
                 ],
-                icon: "/public/frozen/Unknown.jpeg",
+                icon: "/frozen/Unknown.jpeg",
                 tags: [
                     { name: 'Citrus', color: 'bg-orange-300', icon: '🍊' },
                     { name: 'Refreshing', color: 'bg-blue-200', icon: '💧' },
@@ -1037,7 +1037,7 @@ export const products = [
                     
                     {size: 'Large', price: 150},
                 ],
-                icon: "/public/frozen/Unknown-3.jpeg",
+                icon: "/frozen/Unknown-3.jpeg",
                 tags: [
                     { name: 'Tropical', color: 'bg-green-300', icon: '🌴' },
                     { name: 'Pineapple', color: 'bg-yellow-300', icon: '🍍' },
@@ -1051,7 +1051,7 @@ export const products = [
                    
                     {size: 'Large', price: 150},
                 ],
-                icon: "/public/frozen/Unknown-4.jpeg",
+                icon: "/frozen/Unknown-4.jpeg",
                 tags: [
                     { name: 'Fruity', color: 'bg-yellow-200', icon: '🍒' },
                     { name: 'Refreshing', color: 'bg-blue-200', icon: '💧' },
@@ -1065,7 +1065,7 @@ export const products = [
                     
                     {size: 'Large', price: 150},
                 ],
-                icon: "/public/frozen/Unknown-5.jpeg",
+                icon: "/frozen/Unknown-5.jpeg",
                 tags: [
                     { name: 'Lemon', color: 'bg-yellow-300', icon: '🍋' },
                     { name: 'Citrus', color: 'bg-orange-300', icon: '🍊' },
@@ -1078,7 +1078,7 @@ export const products = [
       {
         id: '7',
         name: 'Fruit Salad',
-        icon: "/public/all/Unknown-13.jpeg",
+        icon: "/all/Unknown-13.jpeg",
         items: [
           {
             id: '7_1',
@@ -1087,7 +1087,7 @@ export const products = [
               { size: 'Medium', price: 275 },
               { size: 'Large', price: 325 }
             ],
-            icon: "/public/all/Screen Shot 2025-07-30 at 17.45.40.png",
+            icon: "/all/Screen Shot 2025-07-30 at 17.45.40.png",
             tags: [
               { name: 'Chocolate', color: 'bg-brown-300', icon: '🍫' },
               { name: 'Fruit', color: 'bg-red-200', icon: '🍓' },
@@ -1101,7 +1101,7 @@ export const products = [
               { size: 'Medium', price: 250 },
               { size: 'Large', price: 300 }
             ],
-            icon: "/public/all/Unknown-13.jpeg",
+            icon: "/all/Unknown-13.jpeg",
             tags: [
               { name: 'Honey', color: 'bg-yellow-300', icon: '🍯' },
               { name: 'Cream', color: 'bg-white', icon: '🍦' },
@@ -1115,7 +1115,7 @@ export const products = [
               { size: 'Medium', price: 325 },
               { size: 'Large', price: 375 }
             ],
-            icon: "/public/all/Unknown-14.jpeg",
+            icon: "/all/Unknown-14.jpeg",
             tags: [
               { name: 'Tropical', color: 'bg-green-300', icon: '🌴' },
               { name: 'Fruit', color: 'bg-red-200', icon: '🍓' },
@@ -1128,7 +1128,7 @@ export const products = [
               { size: 'Medium', price: 200 },
               { size: 'Large', price: 250 }
             ],
-            icon: "/public/all/Unknown-13.jpeg",
+            icon: "/all/Unknown-13.jpeg",
             tags: [
               { name: 'Tropical', color: 'bg-green-300', icon: '🌴' },
               { name: 'Fruit', color: 'bg-red-200', icon: '🍓' },
@@ -1153,7 +1153,7 @@ export const products = [
       {
         id: '8',
         name: 'Crepe',
-        icon: "/public/all/Unknown-2.jpeg",
+        icon: "/all/Unknown-2.jpeg",
         items: [
           {
             id: '8_1',
@@ -1161,7 +1161,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 250 }
             ],
-            icon: '/public/crep/kreeb.jpeg',
+            icon: '/crep/kreeb.jpeg',
             tags: [
               { name: 'Chocolate', color: 'bg-brown-300', icon: '🍫' },
               { name: 'Crepe', color: 'bg-yellow-200', icon: '🥞' },
@@ -1174,7 +1174,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 250 }
             ],
-            icon: '/public/crep/f9b88baeab392544f50edc87159294b8.jpeg',
+            icon: '/crep/f9b88baeab392544f50edc87159294b8.jpeg',
             tags: [
               { name: 'White Chocolate', color: 'bg-white', icon: '🍫' },
               { name: 'Crepe', color: 'bg-yellow-200', icon: '🥞' },
@@ -1187,7 +1187,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 300 }
             ],
-            icon: '/public/crep/maxresdefault.jpeg',
+            icon: '/crep/maxresdefault.jpeg',
             tags: [
               { name: 'Chocolate', color: 'bg-brown-300', icon: '🍫' },
               { name: 'Fruits', color: 'bg-red-200', icon: '🍓' },
@@ -1200,7 +1200,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 275 }
             ],
-            icon: '/public/crep/8b71273adc2b5868facd1f17ce097edc_w750_h750.jpeg',
+            icon: '/crep/8b71273adc2b5868facd1f17ce097edc_w750_h750.jpeg',
             tags: [
               { name: 'Banana', color: 'bg-yellow-300', icon: '🍌' },
               { name: 'Crepe', color: 'bg-yellow-200', icon: '🥞' },
@@ -1213,7 +1213,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 325 }
             ],
-            icon: '/public/crep/f17dfb259cf1a630376453845ee687db7481228e.jpeg',
+            icon: '/crep/f17dfb259cf1a630376453845ee687db7481228e.jpeg',
             tags: [
               { name: 'Banana', color: 'bg-yellow-300', icon: '🍌' },
               { name: 'Cream', color: 'bg-white', icon: '🍦' },
@@ -1226,7 +1226,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 300 }
             ],
-            icon: '/public/crep/184970-كريب-اللوتس.jpeg',
+            icon: '/crep/184970-كريب-اللوتس.jpeg',
             tags: [
               { name: 'Lotus', color: 'bg-brown-400', icon: '🍪' },
               { name: 'Crepe', color: 'bg-yellow-200', icon: '🥞' },
@@ -1239,7 +1239,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 250 }
             ],
-            icon: '/public/crep/sddefault.jpeg',
+            icon: '/crep/sddefault.jpeg',
             tags: [
               { name: 'Fettuccine', color: 'bg-yellow-200', icon: '🍝' },
               { name: 'Pasta', color: 'bg-red-200', icon: '🍝' },
@@ -1252,7 +1252,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 275 }
             ],
-            icon: '/public/crep/maxresdefault.jpeg',
+            icon: '/crep/maxresdefault.jpeg',
             tags: [
               { name: 'Lotus', color: 'bg-brown-400', icon: '🍪' },
               { name: 'Crepe', color: 'bg-yellow-200', icon: '🥞' },
@@ -1265,7 +1265,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 300 }
             ],
-            icon: '/public/crep/f9b88baeab392544f50edc87159294b8.jpeg',
+            icon: '/crep/f9b88baeab392544f50edc87159294b8.jpeg',
             tags: [
               { name: 'Kinder', color: 'bg-orange-400', icon: '🍫' },
               { name: 'Crepe', color: 'bg-yellow-200', icon: '🥞' },
@@ -1278,7 +1278,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 300 }
             ],
-            icon: '/public/crep/Oreo-Crepe-Dolce-Vita-Indianapolis-1024x769.jpeg',
+            icon: '/crep/Oreo-Crepe-Dolce-Vita-Indianapolis-1024x769.jpeg',
             tags: [
               { name: 'Oreo', color: 'bg-blue-500', icon: '🍪' },
               { name: 'Crepe', color: 'bg-yellow-200', icon: '🥞' },
@@ -1291,7 +1291,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 300 }
             ],
-            icon: '/public/crep/10ecd5bc866fbd8a874200e5e785acd3.webp',
+            icon: '/crep/10ecd5bc866fbd8a874200e5e785acd3.webp',
             tags: [
               { name: 'KitKat', color: 'bg-red-500', icon: '🍫' },
               { name: 'Crepe', color: 'bg-yellow-200', icon: '🥞' },
@@ -1304,7 +1304,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 300 }
             ],
-            icon: "/public/all/Unknown-2.jpeg",
+            icon: "/all/Unknown-2.jpeg",
             tags: [
               { name: 'dubai', color: 'bg-brown-400', icon: '🍪' },
               { name: 'Crepe', color: 'bg-yellow-200', icon: '🥞' },
@@ -1317,7 +1317,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 350 }
             ],
-            icon: '/public/crep/sushi_crepe_1714388563295_1714388578928.webp',
+            icon: '/crep/sushi_crepe_1714388563295_1714388578928.webp',
             tags: [
               { name: 'sushi', color: 'bg-brown-400', icon: '🍪' },
               { name: 'Crepe', color: 'bg-yellow-200', icon: '🥞' },
@@ -1330,7 +1330,7 @@ export const products = [
       {
         id: '9',
         name: 'Mojito',
-        icon: "/public/mojedo/Unknown-1.jpeg",
+        icon: "/mojedo/Unknown-1.jpeg",
         items: [
           {
             id: '9_1',
@@ -1338,7 +1338,7 @@ export const products = [
             options: [
                 { size: 'Normal', price: 150 }
             ],
-            icon: '/public/mojedo/Unknown.jpeg',
+            icon: '/mojedo/Unknown.jpeg',
             tags: [
               { name: 'Lemon', color: 'bg-yellow-300', icon: '🍋' },
               { name: 'Mint', color: 'bg-green-200', icon: '🌿' },
@@ -1351,7 +1351,7 @@ export const products = [
             options: [
                 { size: 'Normal', price: 150 }
             ],
-            icon: '/public/mojedo/Unknown-1.jpeg',
+            icon: '/mojedo/Unknown-1.jpeg',
             tags: [
               { name: 'Blue', color: 'bg-blue-400', icon: '🔵' },
               { name: 'Ice Cold', color: 'bg-blue-100', icon: '🧊' }
@@ -1363,7 +1363,7 @@ export const products = [
             options: [
                 { size: 'Normal', price: 150 }
             ],
-            icon: '/public/mojedo/Unknown-2.jpeg',
+            icon: '/mojedo/Unknown-2.jpeg',
             tags: [
               { name: 'Pomegranate', color: 'bg-red-400', icon: '🍎' },
               { name: 'Ice Cold', color: 'bg-blue-100', icon: '🧊' }
@@ -1375,7 +1375,7 @@ export const products = [
             options: [
                 { size: 'Normal', price: 150 }
             ],
-            icon: '/public/mojedo/Unknown-3.jpeg',
+            icon: '/mojedo/Unknown-3.jpeg',
             tags: [
               { name: 'Strawberry', color: 'bg-red-300', icon: '🍓' },
               { name: 'Ice Cold', color: 'bg-blue-100', icon: '🧊' }
@@ -1387,7 +1387,7 @@ export const products = [
             options: [
                 { size: 'Normal', price: 150 }
             ],
-            icon: '/public/mojedo/Unknown-4.jpeg',
+            icon: '/mojedo/Unknown-4.jpeg',
             tags: [
               { name: 'Berries', color: 'bg-purple-300', icon: '🍇' },
               { name: 'Ice Cold', color: 'bg-blue-100', icon: '🧊' }
@@ -1399,7 +1399,7 @@ export const products = [
             options: [
                 { size: 'Normal', price: 150 }
             ],
-            icon: '/public/mojedo/Unknown-5.jpeg',
+            icon: '/mojedo/Unknown-5.jpeg',
             tags: [
               { name: 'Watermelon', color: 'bg-green-400', icon: '🍉' },
               { name: 'Ice Cold', color: 'bg-blue-100', icon: '🧊' }
@@ -1410,7 +1410,7 @@ export const products = [
       {
         id: '10',
         name: 'IceCream',
-        icon: "/public/ıce cream/Screen Shot 2025-07-30 at 14.48.29.png",
+        icon: "/ıce cream/Screen Shot 2025-07-30 at 14.48.29.png",
         items: [
           {
             id: '10_1',
@@ -1418,7 +1418,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 250 }
             ],
-            icon: '/public/ıce cream/Unknown-2.jpeg',
+            icon: '/ıce cream/Unknown-2.jpeg',
             tags: [
               { name: 'Fruit', color: 'bg-green-300', icon: '🍓' },
               { name: 'Ice Cream', color: 'bg-pink-200', icon: '🍦' }
@@ -1430,7 +1430,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 250 }
             ],
-            icon: '/public/ıce cream/Unknown-1.jpeg',
+            icon: '/ıce cream/Unknown-1.jpeg',
             tags: [
               { name: 'Chocolate', color: 'bg-brown-300', icon: '🍫' },
               { name: 'Ice Cream', color: 'bg-pink-200', icon: '🍦' }
@@ -1454,7 +1454,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 275 }
             ],
-            icon: '/public/ıce cream/Unknown-3.jpeg',
+            icon: '/ıce cream/Unknown-3.jpeg',
             tags: [
               { name: 'Honey', color: 'bg-yellow-300', icon: '🍯' },
               { name: 'Nuts', color: 'bg-brown-200', icon: '🌰' },
@@ -1467,7 +1467,7 @@ export const products = [
             options: [
               { size: 'Normal', price: 275 }
             ],
-            icon: '/public/ıce cream/Unknown-4.jpeg',
+            icon: '/ıce cream/Unknown-4.jpeg',
             tags: [
               { name: 'Honey', color: 'bg-yellow-300', icon: '🍯' },
               { name: 'Nuts', color: 'bg-brown-200', icon: '🌰' },
@@ -1479,7 +1479,7 @@ export const products = [
     {
         "id": "10",
         "name": "أصناف DHO",
-        "icon": "/public/all/Unknown-11.jpeg",
+        "icon": "/all/Unknown-11.jpeg",
         "items": [
           {
             "id": "10_1",
@@ -1498,7 +1498,7 @@ export const products = [
             "options": [
               { "size": "Normal", "price": 275 }
             ],
-            "icon": "/public/all/Unknown-12.jpeg",
+            "icon": "/all/Unknown-12.jpeg",
             "tags": [
               { "name": "Chocolate", "color": "bg-brown-300", "icon": "🍫" },
               { "name": "Koshary", "color": "bg-orange-200", "icon": "🍛" }
@@ -1510,7 +1510,7 @@ export const products = [
             "options": [
               { "size": "Normal", "price": 300 }
             ],
-            "icon": "/public/all/Unknown-12.jpeg",
+            "icon": "/all/Unknown-12.jpeg",
             "tags": [
               { "name": "Lotus", "color": "bg-amber-300", "icon": "🌼" },
               { "name": "Koshary", "color": "bg-orange-200", "icon": "🍛" }
@@ -1522,7 +1522,7 @@ export const products = [
             "options": [
               { "size": "Normal", "price": 275 }
             ],
-            "icon": "/public/all/Unknown-12.jpeg",
+            "icon": "/all/Unknown-12.jpeg",
             "tags": [
               { "name": "Pistachio", "color": "bg-green-300", "icon": "🥜" },
               { "name": "Koshary", "color": "bg-orange-200", "icon": "🍛" }
