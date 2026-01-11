@@ -1,6 +1,4 @@
-﻿import React from "react";
-
-export default function RatingStars({ average }: { average: number }) {
+﻿export default function RatingStars({ average }: { average: number }) {
   const full = Math.floor(average);
   const half = average - full >= 0.5 ? 1 : 0;
   const empty = 5 - full - half;

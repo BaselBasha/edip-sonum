@@ -1,6 +1,5 @@
-﻿import React from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
-import { products, ProductType } from "../data";
+﻿import { Route, Routes, Navigate } from "react-router-dom";
+import { products, ProductItemType, ProductType, SubcategoryType } from "../data";
 
 import Category from "./Category";
 import ProductList from "./ProductList";
@@ -24,11 +23,23 @@ import AITest from "./AITest/AITest";
 // Utility function to convert product names to URL-friendly slugs
 const slugify = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 
+const isSubcategoryArray = (items: ProductType["items"]): items is SubcategoryType[] => {
+  return Array.isArray(items) && (items.length === 0 || "items" in items[0]);
+};
+
+const isProductItemArray = (items: ProductType["items"]): items is ProductItemType[] => {
+  return Array.isArray(items) && (items.length === 0 || "options" in items[0]);
+};
+
 const RoutesConfig: React.FC = () => {
   const { t } = useTranslation();
 
   // Find Waffle & Cake category
   const waffleAndCakeCategory = products.find((cat) => cat.name === "Waffle & Cake");
+  const waffleSubcategories =
+    waffleAndCakeCategory && isSubcategoryArray(waffleAndCakeCategory.items)
+      ? waffleAndCakeCategory.items
+      : null;
 
   return (
     <>
@@ -55,15 +66,14 @@ const RoutesConfig: React.FC = () => {
         />
 
         {/* User Routes for Waffle & Cake */}
-        {waffleAndCakeCategory && (
+        {waffleSubcategories && waffleAndCakeCategory && (
           <>
             <Route
               path={`/categories/${slugify(waffleAndCakeCategory.name)}`}
-              element={<SubcategoryList items={waffleAndCakeCategory.items} />}
+              element={<SubcategoryList items={waffleSubcategories} />}
             />
 
-            {/* NOTE: subcategory type may be strict in TS configs; using any to avoid implicit any errors */}
-            {waffleAndCakeCategory.items.map((subcategory: any) => (
+            {waffleSubcategories.map((subcategory) => (
               <Route
                 key={subcategory.id}
                 path={`/categories/${slugify(waffleAndCakeCategory.name)}/${slugify(subcategory.name)}`}
@@ -80,7 +90,7 @@ const RoutesConfig: React.FC = () => {
             <Route
               key={category.id}
               path={`/categories/${slugify(category.name)}`}
-              element={<ProductList items={category.items} />}
+              element={<ProductList items={isProductItemArray(category.items) ? category.items : []} />}
             />
           ))}
 
@@ -88,24 +98,20 @@ const RoutesConfig: React.FC = () => {
         <Route path="/categories/admin" element={<AdminCategory />} />
 
         {/* Admin Routes for Waffle & Cake */}
-        {waffleAndCakeCategory && (
+        {waffleSubcategories && waffleAndCakeCategory && (
           <>
             <Route
               path={`/categories/admin/${slugify(waffleAndCakeCategory.name)}`}
-              element={<AdminSubcategoryList items={waffleAndCakeCategory.items} />}
+              element={<AdminSubcategoryList items={waffleSubcategories} onDelete={() => {}} onAddCategory={() => {}} />}
             />
 
-            {waffleAndCakeCategory.items.map((subcategory: any) => (
+            {waffleSubcategories.map((subcategory) => (
               <Route
                 key={subcategory.id}
                 path={`/categories/admin/${slugify(waffleAndCakeCategory.name)}/${slugify(subcategory.name)}`}
                 element={
                   <AdminProductList
                     items={subcategory.items}
-                    categoryName={waffleAndCakeCategory.name}
-                    subcategoryName={subcategory.name}
-                    onEdit={() => {}}
-                    onAddNewCategory={() => {}}
                   />
                 }
               />
@@ -122,11 +128,7 @@ const RoutesConfig: React.FC = () => {
               path={`/categories/admin/${slugify(category.name)}`}
               element={
                 <AdminProductList
-                  items={category.items}
-                  categoryName={category.name}
-                  subcategoryName={""}
-                  onEdit={() => {}}
-                  onAddNewCategory={() => {}}
+                  items={isProductItemArray(category.items) ? category.items : []}
                 />
               }
             />

@@ -1,4 +1,4 @@
-﻿import React, { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import RatingStars from "./RatingStars";
 import { Review } from "../../ratings/types";
 import { computeSummary } from "../../ratings/summary";

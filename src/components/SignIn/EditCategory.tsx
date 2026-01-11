@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { products, ProductType } from '../../data';
 
@@ -43,7 +43,7 @@ const EditCategory: React.FC = () => {
                 icon: imagePreview,
                 items: []
             };
-            products.push(newCategory);
+            (products as unknown as ProductType[]).push(newCategory);
         }
 
         // Navigate back after saving

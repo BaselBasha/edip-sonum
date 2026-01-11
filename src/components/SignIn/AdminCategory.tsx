@@ -1,6 +1,4 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import { products, ProductType } from '../../data';
 import { TiDelete } from "react-icons/ti";
 import { MdEdit } from "react-icons/md";
@@ -10,7 +8,6 @@ import EditSales from './EditSales';
 const slugify = (name: string) => name.toLowerCase().replace(/\s+/g, '-');
 
 const AdminCategory: React.FC = () => {
-    const { t } = useTranslation();
     const navigate = useNavigate();
 
     const handleDelete = (id: string) => {

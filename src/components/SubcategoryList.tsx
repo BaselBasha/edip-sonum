@@ -1,12 +1,11 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ProductItemType } from '../data';
+import { SubcategoryType } from '../data';
 
 // Utility function to convert names to URL-friendly slugs
 const slugify = (name: string) => name.toLowerCase().replace(/\s+/g, '-');
 
 type SubcategoryListProps = {
-    items: ProductItemType[];
+    items: SubcategoryType[];
 };
 
 const SubcategoryList: React.FC<SubcategoryListProps> = ({ items }) => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ProductItemType } from '../../data';
 import { TiDelete } from 'react-icons/ti';
@@ -7,16 +7,12 @@ import { FaPlus } from 'react-icons/fa';
 
 type AdminProductListProps = {
     items: ProductItemType[];
-    onEdit: (id: string) => void;
-    onAddNewCategory: () => void;
 };
 
-const AdminProductList: React.FC<AdminProductListProps> = ({ items, onEdit, onAddNewCategory }) => {
+const AdminProductList: React.FC<AdminProductListProps> = ({ items }) => {
     const { categoryName, subcategoryName } = useParams<{ categoryName: string, subcategoryName: string }>();
     const [selectedPrices, setSelectedPrices] = useState<{ [key: string]: string }>({});
     const navigate = useNavigate();
-
-    const filteredItems = items.filter(item => item.subcategoryName === subcategoryName);
 
     const handlePriceChange = (itemId: string, price: string) => {
         setSelectedPrices((prevPrices) => ({
@@ -48,7 +44,7 @@ const AdminProductList: React.FC<AdminProductListProps> = ({ items, onEdit, onAd
     return (
         <div className="min-h-screen p-4 flex justify-center items-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl">
-                {filteredItems.map((item) => (
+                {items.map((item) => (
                     <div key={item.id}
                          className="max-w-sm p-6 bg-white rounded-xl shadow-lg flex flex-col items-center">
                         <img

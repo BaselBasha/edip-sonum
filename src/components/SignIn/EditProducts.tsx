@@ -1,12 +1,30 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { ProductItemType, ProductOption } from '../../data';
+import { products, ProductItemType, ProductOption, ProductType, SubcategoryType } from '../../data';
+
+const slugify = (name: string) => name.toLowerCase().replace(/\s+/g, '-');
+
+const isSubcategoryArray = (items: ProductType['items']): items is SubcategoryType[] => {
+    return Array.isArray(items) && (items.length === 0 || 'items' in items[0]);
+};
 
 const EditProducts: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const { categoryName, subcategoryName, productId } = useParams<{ categoryName: string, subcategoryName: string, productId: string }>();
-    const { item } = location.state as { item: ProductItemType };
+    const { categoryName, subcategoryName } = useParams<{ categoryName: string, subcategoryName: string }>();
+
+    const state = location.state as { item?: ProductItemType } | null;
+    const item = state?.item;
+    if (!item) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gray-100">
+                <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+                    <h2 className="text-xl font-bold mb-2">Missing product data</h2>
+                    <p className="text-gray-700">Please open this page from the admin product list.</p>
+                </div>
+            </div>
+        );
+    }
 
     const [name, setName] = useState(item.name);
     const [description, setDescription] = useState(item.description || '');
@@ -30,9 +48,14 @@ const EditProducts: React.FC = () => {
     };
 
     const handlePriceChange = (index: number, field: 'size' | 'price', value: string | number) => {
-        const updatedOptions = [...priceOptions];
-        updatedOptions[index][field] = field === 'price' ? Number(value) : value;
-        setPriceOptions(updatedOptions);
+        setPriceOptions((prev) =>
+            prev.map((option, i) => {
+                if (i !== index) return option;
+                return field === 'price'
+                    ? { ...option, price: Number(value) }
+                    : { ...option, size: String(value) };
+            })
+        );
     };
 
     const handleRemovePriceOption = (index: number) => {
@@ -40,9 +63,9 @@ const EditProducts: React.FC = () => {
     };
 
     const handleTagChange = (index: number, field: 'name' | 'icon' | 'color', value: string) => {
-        const updatedTags = [...tags];
-        updatedTags[index][field] = value;
-        setTags(updatedTags);
+        setTags((prev) =>
+            prev.map((tag, i) => (i === index ? { ...tag, [field]: value } : tag))
+        );
     };
 
     const handleAddTag = () => {
@@ -60,34 +83,43 @@ const EditProducts: React.FC = () => {
             description,
             options: priceOptions,
             tags,
-            icon: imagePreview
+            icon: imagePreview,
+            subcategoryName: subcategoryName,
         };
 
-        // Find the category and subcategory to update or add the product
-        let categoryFound = false;
-        products.forEach(category => {
-            if (category.name === categoryName) {
-                categoryFound = true;
-                category.items.forEach(subcategory => {
-                    if (subcategory.name === subcategoryName) {
-                        if (item.id) {
-                            // Edit existing product
-                            const productIndex = subcategory.items.findIndex(p => p.id === item.id);
-                            if (productIndex !== -1) {
-                                subcategory.items[productIndex] = updatedProduct;
-                            }
-                        } else {
-                            // Add new product
-                            subcategory.items.push(updatedProduct);
-                        }
-                    }
-                });
-            }
-        });
+        const typedProducts = products as unknown as ProductType[];
 
-        if (!categoryFound) {
-            console.error('Category or subcategory not found.');
+        const category = typedProducts.find(
+            (c) => slugify(c.name) === categoryName || c.name === categoryName
+        );
+        if (!category) {
+            console.error('Category not found.');
             return;
+        }
+
+        if (subcategoryName && isSubcategoryArray(category.items)) {
+            const subcategory = category.items.find(
+                (s) => slugify(s.name) === subcategoryName || s.name === subcategoryName
+            );
+            if (!subcategory) {
+                console.error('Subcategory not found.');
+                return;
+            }
+
+            const productIndex = subcategory.items.findIndex((p) => p.id === item.id);
+            if (productIndex !== -1) {
+                subcategory.items[productIndex] = updatedProduct;
+            } else {
+                subcategory.items.push(updatedProduct);
+            }
+        } else if (Array.isArray(category.items)) {
+            const productItems = category.items as unknown as ProductItemType[];
+            const productIndex = productItems.findIndex((p) => p.id === item.id);
+            if (productIndex !== -1) {
+                productItems[productIndex] = updatedProduct;
+            } else {
+                productItems.push(updatedProduct);
+            }
         }
 
         console.log('Product saved:', updatedProduct);

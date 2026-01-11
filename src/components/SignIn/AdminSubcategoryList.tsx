@@ -1,28 +1,23 @@
-import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ProductItemType } from '../../data';
+import { SubcategoryType } from '../../data';
 import { TiDelete } from 'react-icons/ti';
 import { MdEdit } from 'react-icons/md';
 import { FaPlus } from 'react-icons/fa';
 
 type AdminSubcategoryListProps = {
-    items: ProductItemType[];
-    onEdit: (id: string) => void;
+    items: SubcategoryType[];
     onDelete: (id: string) => void;
     onAddCategory: () => void;
-    isSpecialCategory: boolean;
 };
 
 const AdminSubcategoryList: React.FC<AdminSubcategoryListProps> = ({
                                                                        items,
-                                                                       onEdit,
                                                                        onDelete,
                                                                        onAddCategory,
-                                                                       isSpecialCategory,
                                                                    }) => {
     const navigate = useNavigate();
 
-    const handleEditClick = (subcategory: ProductItemType, event: React.MouseEvent) => {
+    const handleEditClick = (subcategory: SubcategoryType, event: React.MouseEvent) => {
         event.stopPropagation(); // Prevent triggering the link
         navigate(
             `/categories/admin/waffle-&-cake/edit/${subcategory.id}`,

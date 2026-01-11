@@ -1541,9 +1541,11 @@ export interface ProductOption {
 export interface ProductItemType {
     id: string;
     name: string;
+    description?: string;
     icon: string;
     options: { size: string; price: number }[];
     tags: { name: string; icon: string; color: string }[];
+    subcategoryName?: string;
   }
   
   export interface SubcategoryType {
